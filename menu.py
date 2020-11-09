@@ -108,65 +108,65 @@ while op!=0:
 	elif int(op)==3:
 		 while(1):             
             			print("""
-			\t1 to run a container
-			\t2 to start a container
-			\t3 to stop a container
-			\t4 to remove a container
-			\t5 to view logs for a container
-			\t6 to list all containers
-			\t7 to list all images
+			\t1 To run a container
+			\t2 To start a container
+			\t3 To stop a container
+			\t4 To remove a container
+			\t5 To view logs for a container
+			\t6 To list all containers
+			\t7 To list all images
 			""")
-		            	choice=int(input())
-           			 os.system("clear")
+		        choice=int(input())
+           		os.system("clear")
            			 if choice==1:
-                				print("Enter container name")
+                			 print("Enter container name")
                				 name=input()
                				 print("Enter image name")
               				 img_name=input()
                				 os.system("docker run -it --name {0} {1}".format(name,img_name))
            			elif choice==2:
-               				 print("Enter container name/id")
+               				 print("Enter container name")
                				 name=input()
                				 print("Starting container...") 
                				 os.system("docker start {}".format(name))
             			elif choice==3:
-               				 print("Enter container name/id")
+               				 print("Enter container name")
                				 name=input()
                				 print("Stopping container")
                				 os.system("docker stop {}".format(name))
             			elif choice==4:
-                				print("Ënter container name/id")
+                			print("Ënter container name")
               				name=input()
-                				print("Removing container...")
+                			print("Removing container...")
                				os.system("docker stop {}".format(name))
                 				os.system("docker rm -f {}".format(name))
            			elif choice==5:
-                				print("Enter container name")
-                				name=input()
-                				print("Logs for {} are:".format(name))
-                				os.system("docker logs {}".format(name))
+                			print("Enter container name")
+                			name=input()
+                			print("Logs for {} are:".format(name))
+                			os.system("docker logs {}".format(name))
             			elif choice==6:
-                				print("Available containers are:")
-                				os.system("docker ps")
+                			print("The Available containers are:")
+                			os.system("docker ps")
            			elif choice==7:
-                				print("Available images are:")
-                				os.system("docket images")
+                			print("The Available images are:")
+                			os.system("docket images")
               			else:
 				print("Invalid Choice\n")
 	elif int(op)==4:            
        		 while (1):
             			print("""
 			Enter:			
-			\t1 to view date and time
-			\t2 to view calendar
-			\t3 to start a service
-			\t4 to stop a service
-			\t5 to enable a service
-			\t6 to disable a service
-			\t7 to install a software using yum (yum repository must be configured)
-			\t8 to uninstall a software using yum
-			\t9 to view the details of a directory
-			\t10 to open a file using gedit
+			\t1 To view date and time
+			\t2 To view calendar
+			\t3 To start a service
+			\t4 To stop a service
+			\t5 To enable a service
+			\t6 To disable a service
+			\t7 To install a software using yum (yum repository must be configured)
+			\t8 To uninstall a software using yum
+			\t9 To view the details of a directory
+			\t10 To open a file using gedit
 			""")
             			choice=int(input())
            			os.system("clear")
@@ -199,11 +199,11 @@ while op!=0:
                 				name=input()
                 				os.system("yum uninstall {}".format(name))
             			elif choice==9:
-                				print("Enter directory name/address")
+                				print("Enter directory name")
                 				name=input()
                 				os.system("ls {}".format(name))
             			elif choice==10:
-                				print("Enter file name/address")
+                				print("Enter file name")
                 				name=input()
                				os.system("gedit {}".format(name))
             			else:
