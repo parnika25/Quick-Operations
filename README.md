@@ -1,4 +1,4 @@
-# ARTH-TASK
+# Quick Operations
 
 ## 1  AWS Operation
 ## 2  Hadoop Operation
